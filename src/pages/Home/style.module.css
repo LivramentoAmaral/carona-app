@@ -1,0 +1,96 @@
+/* Home.module.css */
+
+.main {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #0cdac3;
+}
+
+.section {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sectionImage {
+    flex: 1;
+    max-width: 300px; /* Ajuste conforme necessário */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.sectionContent {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sectionTitle {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sectionText {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.sectionList {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.sectionListItem {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sectionImage {
+        max-width: 70%;
+        margin: 0 auto 20px auto;
+    }
+
+    .sectionContent {
+        align-items: center;
+    }
+
+    .sectionTitle {
+        font-size: 1.5em;
+    }
+
+    .sectionText, .sectionListItem {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionImage {
+        max-width: 90%;
+    }
+
+    .sectionTitle {
+        font-size: 1.2em;
+    }
+
+    .sectionText, .sectionListItem {
+        font-size: 0.9em;
+    }
+}

@@ -11,7 +11,7 @@ function Header() {
             <div className={styles.textContainer}>
                 <h1 className={styles.headerTitle}>Bem-vindo ao CaronaApp</h1>
                 <p className={styles.headerSubtitle}>A plataforma que facilita a carona entre amigos e colegas.</p>
-            </div>
+                </div>
         </header>
     );
 }
