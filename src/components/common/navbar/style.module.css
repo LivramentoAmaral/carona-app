@@ -1,48 +1,162 @@
-/* Styles for the navigation bar */
+/* style.module.css */
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: #333;
-    color: white;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  color: #0cdac3;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbarLogo img {
+  height: 60px;
+  border-radius: 10px;
+}
+
+.navbarMenu {
+  display: flex;
+  align-items: center;
+  position: relative; /* Importante para posicionamento relativo */
+}
+
+.navbarLinks {
+  list-style: none;
+  display: flex; /* Mostra os links diretamente */
+  margin: 0;
+  padding: 0;
+}
+
+.navbarLinks li {
+  margin: 0 15px;
+}
+
+.navbarLinks li a:hover {
+  background-color: #0cdac3;
+  color: white;
+}
+
+.navbarLinks li a {
+  color: #0cdac3;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: none; /* Esconde o botão hamburguer por padrão */
+}
+
+.menuIcon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #0cdac3;
+  transition: transform 0.3s ease;
+}
+
+.menuIcon:before,
+.menuIcon:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px; /* Ajuste para altura fixa */
+  background-color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.menuIcon:before {
+  transform: translateY(-8px) rotate(0deg);
+}
+
+.menuIcon:after {
+  transform: translateY(8px) rotate(0deg);
+}
+
+.menuIcon.open {
+  transform: rotate(0deg);
+}
+
+.menuIcon.open:before {
+  display: none;
+  transform: translateY(0px) rotate(45deg);
+}
+
+.menuIcon.open:after {
   
-  .navbarLogo a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
+  transform: translateY(0px) rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .navbarMenu {
+    position: relative;
   }
-  
+
+  .menuButton {
+    display: block; /* Mostra o botão hamburguer em telas menores */
+  }
+
   .navbarLinks {
-    list-style: none;
-    display: flex;
+    display: none; /* Esconde os links do menu por padrão em telas menores */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px; /* Largura ajustável conforme necessário */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    flex-direction: column;
+    z-index: 999; /* Garante que o menu sobreponha outros elementos */
   }
-  
+
+  .navbarLinks.open {
+    display: block; /* Mostra os links do menu quando menuOpen for verdadeiro */
+  }
+
   .navbarLinks li {
-    margin: 0 10px;
+    margin: 10px;
   }
-  
-  .navbarLinks a {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s;
+
+  .menuIcon {
+    display: block;
   }
-  
-  .navbarLinks a:hover {
-    color: #ddd;
+
+  .menuIcon:before,
+  .menuIcon:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; /* Ajuste para altura fixa */
+    background-color: #0cdac3;
+    transition: transform 0.3s ease;
   }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .navbarLinks {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .navbarLinks li {
-      margin: 10px 0;
-    }
+
+  .menuIcon:before {
+    transform: translateY(-8px) rotate(0deg);
   }
-  
+
+  .menuIcon:after {
+    transform: translateY(8px) rotate(0deg);
+  }
+
+  .menuIcon.open:before {
+    transform: translateY(0px) rotate(-45deg);
+  }
+
+  .menuIcon.open:after {
+    transform: translateY(0px) rotate(45deg);
+  }
+}
+
+/* Estilo para link ativo */
+.navbarLinks li a.active {
+  background-color: #0cdac3;
+  color: white;
+}

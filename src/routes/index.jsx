@@ -1,20 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from '../pages/Home';
-import Header from '../components/Header';
-import Faq from '../pages/Faq';
-import Blog from '../pages/Blog';
-import UserproFile from '../pages/UserproFile';
-import DriveproFile from '../pages/DriveproFile';
-import Footer from '../components/Footer';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import NavBar from '../components/common/navbar';
+import Blog from '../pages/Blog';
+import DriveproFile from '../pages/DriveproFile';
+import Faq from '../pages/Faq';
+import Home from '../pages/Home';
+import UserproFile from '../pages/UserproFile';
 
 
 function Rotas() {
   return (
     <Router>
-    <NavBar />
-      <Header />
+      <NavBar />
       <Routes>
         <Route exact path="/" component={Home} />
         <Route path="/faq" component={Faq} />
@@ -22,7 +19,6 @@ function Rotas() {
         <Route path="/user-profile" component={UserproFile} />
         <Route path="/driver-profile" component={DriveproFile} />
       </Routes>
-      <Footer />
     </Router>
   );
 }
