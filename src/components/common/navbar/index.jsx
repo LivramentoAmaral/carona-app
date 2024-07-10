@@ -23,6 +23,8 @@ function NavBar() {
           <li><Link to="/blog" onClick={toggleMenu} className={location.pathname === '/blog' ? styles.active : ''}>Blog</Link></li>
           <li><Link to="/user-profile" onClick={toggleMenu} className={location.pathname === '/user-profile' ? styles.active : ''}>Meu Perfil</Link></li>
           <li><Link to="/driver-profile" onClick={toggleMenu} className={location.pathname === '/driver-profile' ? styles.active : ''}>Perfil do Motorista</Link></li>
+          <li><Link to="/register" onClick={toggleMenu} className={location.pathname === '/register' ? styles.active : ''}>Registrar</Link></li>
+          <li><Link to="/login" onClick={toggleMenu} className={location.pathname === '/login' ? styles.active : ''}>Login</Link></li>
         </ul>
         <button className={styles.menuButton} onClick={toggleMenu} aria-label="Abrir Menu">
           <span className={`${styles.menuIcon} ${menuOpen ? styles.open : ''}`}></span>

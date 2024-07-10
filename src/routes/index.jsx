@@ -6,6 +6,8 @@ import DriveproFile from '../pages/DriveproFile';
 import Faq from '../pages/Faq';
 import Home from '../pages/Home';
 import UserproFile from '../pages/UserproFile';
+import Register from '../pages/Register';
+import Login from '../pages/login';
 
 function Rotas() {
   return (
@@ -13,6 +15,8 @@ function Rotas() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/user-profile" element={<UserproFile />} />

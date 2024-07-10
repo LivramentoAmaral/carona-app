@@ -5,6 +5,7 @@ import comoFunImg from "../../assets/comoFunciona/comofunciona.jpeg";
 import pqImg from "../../assets/pqusar/pqimg.jpeg";
 import princImg from "../../assets/principaisRecusos/princimg.jpeg";
 import pergunImg from "../../assets/perguntas/perguntasImg.jpeg";
+import Footer from "../../components/Footer";
 
 function Home() {
     return (
@@ -52,6 +53,7 @@ function Home() {
                     </div>
                 </section>
             </main>
+            <Footer />
         </>
     );
 }
