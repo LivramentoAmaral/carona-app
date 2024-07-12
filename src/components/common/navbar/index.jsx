@@ -11,6 +11,8 @@ function NavBar() {
     setMenuOpen(!menuOpen);
   };
 
+  
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarLogo}>
