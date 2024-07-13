@@ -48,7 +48,7 @@ input {
     border-radius: 5px;
 }
 
-.loginButton {
+.recoverButton {
     background-color: #0cdac3;
     color: white;
     font-size: 1rem;
@@ -60,19 +60,8 @@ input {
     transition: background-color 0.3s;
 }
 
-.loginButton:hover {
+.recoverButton:hover {
     background-color: #09b8a8;
-}
-
-.forgotPasswordLink {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #0cdac3;
-    text-decoration: none;
-}
-
-.forgotPasswordLink:hover {
-    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -88,7 +77,7 @@ input {
         font-size: 1.5rem;
     }
 
-    .loginButton {
+    .recoverButton {
         font-size: 0.9rem;
         padding: 8px 16px;
     }

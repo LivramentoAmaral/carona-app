@@ -21,7 +21,6 @@ function NavBar() {
       <div className={styles.navbarMenu}>
         <ul className={`${styles.navbarLinks} ${menuOpen ? styles.open : ''}`}>
           <li><Link to="/" onClick={toggleMenu} className={location.pathname === '/' ? styles.active : ''}>Home</Link></li>
-          <li><Link to="/faq" onClick={toggleMenu} className={location.pathname === '/faq' ? styles.active : ''}>FAQ</Link></li>
           <li><Link to="/blog" onClick={toggleMenu} className={location.pathname === '/blog' ? styles.active : ''}>Blog</Link></li>
           <li><Link to="/user-profile" onClick={toggleMenu} className={location.pathname === '/user-profile' ? styles.active : ''}>Meu Perfil</Link></li>
           <li><Link to="/driver-profile" onClick={toggleMenu} className={location.pathname === '/driver-profile' ? styles.active : ''}>Perfil do Motorista</Link></li>
